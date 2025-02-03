@@ -66,7 +66,7 @@ public:
 	short GetDay() {
 		return _Day;
 	}
-	__declspec(property(get = GetDay, put = SetDay)) short Day;
+	//__declspec(property(get = GetDay, put = SetDay)) short Day;
 
 	void SetMonth(short Month) {
 		_Month = Month;
@@ -75,7 +75,7 @@ public:
 	short GetMonth() {
 		return _Month;
 	}
-	__declspec(property(get = GetMonth, put = SetMonth)) short Month;
+	//__declspec(property(get = GetMonth, put = SetMonth)) short Month;
 
 
 	void SetYear(short Year) {
@@ -85,7 +85,7 @@ public:
 	short GetYear() {
 		return _Year;
 	}
-	__declspec(property(get = GetYear, put = SetYear)) short Year;
+	//__declspec(property(get = GetYear, put = SetYear)) short Year;
 
    void Print()
 	{
@@ -111,7 +111,7 @@ public:
     static	bool IsValidDate(clsDate Date)
 	{
 
-		if (Date.Day < 1 || Date.Day>31)
+		if (Date.GetDay() < 1 || Date.GetDay()>31)
 			return false;
 
 		if (Date.Month < 1 || Date.Month>12)
