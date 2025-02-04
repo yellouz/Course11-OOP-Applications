@@ -14,6 +14,7 @@
 
 using namespace std;
 
+/*
 void ReadClientInfo(clsBankClient &Client)
 {
         cout << "\nFirst Name : ";
@@ -73,43 +74,6 @@ void AddNewClient()
         }
 }
 
-void DeleteClient()
-{
-    string AccountNumber = "";
-    cout << "\nPlease Enter Account Number : ";
-    AccountNumber = clsInputValidate::ReadString();
-
-    while (!clsBankClient::IsClientExist(AccountNumber))
-    {
-        cout << "\nAccount Number not found, choose another one : ";
-        AccountNumber = clsInputValidate::ReadString();
-    }
-
-    clsBankClient Client = clsBankClient::Find(AccountNumber);
-    Client.Print();
-
-    cout << "\nAre You Sure you Want to delete this client? [Y/N] : ";
-    char Answer;
-    cin >> Answer;
-
-    if (Answer == 'Y' || Answer == 'y')
-    {
-        if (Client.Delete())
-        {
-            cout << "Client Deleted Successfully.\n";
-
-            Client.Print();
-        }
-        else
-        {
-            cout << "Error, Client was not deleted\n";
-        }
-        
-    }
-    
-
-}
-
 void PrintClientRecordLine(clsBankClient Client)
 {
 
@@ -155,6 +119,45 @@ void ShowClientsList()
     cout << "_________________________________________\n" << endl;
 
 }
+
+void DeleteClient()
+{
+    string AccountNumber = "";
+    cout << "\nPlease Enter Account Number : ";
+    AccountNumber = clsInputValidate::ReadString();
+
+    while (!clsBankClient::IsClientExist(AccountNumber))
+    {
+        cout << "\nAccount Number not found, choose another one : ";
+        AccountNumber = clsInputValidate::ReadString();
+    }
+
+    clsBankClient Client = clsBankClient::Find(AccountNumber);
+    Client.Print();
+
+    cout << "\nAre You Sure you Want to delete this client? [Y/N] : ";
+    char Answer;
+    cin >> Answer;
+
+    if (Answer == 'Y' || Answer == 'y')
+    {
+        if (Client.Delete())
+        {
+            cout << "Client Deleted Successfully.\n";
+
+            Client.Print();
+        }
+        else
+        {
+            cout << "Error, Client was not deleted\n";
+        }
+        
+    }
+    
+
+}
+
+*/
 
 void PrintClientRecordBalanceLine(clsBankClient Client)
 {

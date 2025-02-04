@@ -1,9 +1,14 @@
 #pragma once
-#include <iostream>
-#include "clsScreen.h"
-#include "clsInputValidate.h"
-#include <iomanip>
 
+#include <iostream>
+#include <iomanip>
+#include "clsInputValidate.h"
+#include "clsScreen.h"
+#include "clsClientListScreen.h"
+#include "clsAddNewClientScreen.h"
+#include "clsDeleteClientScreen.h"
+#include "clsUpdateClientScreen.h"
+#include "clsFindClientScreen.h"
 
 using namespace std;
 
@@ -20,8 +25,8 @@ class clsMainScreen:protected clsScreen
 
        static short _ReadMainMenueOption()
         {
-            cout <<setw(37) << left << ""<< "Choose what do you want to do? [1 to 8]? ";
-            short Choice = clsInputValidate::ReadShortNumberBetween(1,8,"Enter Number between 1 to 8? ");
+            cout <<setw(37) << left << "" << "Choose what do you want to do? [1 to 8]? ";
+            short Choice = clsInputValidate::ReadShortNumberBetween(1,8,"\t\t\t\t     Enter Number between 1 to 8? ");
             return Choice;
         }
 
@@ -35,33 +40,32 @@ class clsMainScreen:protected clsScreen
        
        static void _ShowAllClientsScreen()
        {
-        cout << "\nClient List Screen Will be here...\n";
-        
-
+            //cout << "\nShow Clients Screen Will be here...\n";
+            clsClientListScreen::ShowClientsList();
        }
 
        static void _ShowAddNewClientsScreen()
        {
-           cout << "\nAdd New Client Screen Will be here...\n";
-         
+           //cout << "\nAdd New Client Screen Will be here...\n";
+            clsAddNewClientScreen::AddNewClientScreen();
        }
 
        static void _ShowDeleteClientScreen()
        {
-           cout << "\nDelete Client Screen Will be here...\n";
-
+           //cout << "\nDelete Client Screen Will be here...\n";
+            clsDeleteClientScreen::DeleteClientScreen();
        }
 
        static void _ShowUpdateClientScreen()
        {
-           cout << "\nUpdate Client Screen Will be here...\n";
-
+           //cout << "\nUpdate Client Screen Will be here...\n";
+            clsUpdateClientScreen::UpdateClientScreen();
        }
 
        static void _ShowFindClientScreen()
        {
-           cout << "\nFind Client Screen Will be here...\n";
-
+           //cout << "\nFind Client Screen Will be here...\n";
+            clsFindClientScreen::FindClientScreen();
        }
 
        static void _ShowTransactionsMenue()
