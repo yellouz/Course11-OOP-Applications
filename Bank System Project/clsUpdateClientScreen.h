@@ -48,7 +48,7 @@ private:
     }
     
 public:
-    static void UpdateClientScreen()
+    static void ShowUpdateClientScreen()
     {
         _DrawScreenHeader("\t  Update Client Screen");
 

@@ -21,7 +21,7 @@ class clsClientListScreen : protected clsScreen
     }
 
     public:
-    static void ShowClientsList()
+    static void ShowAllClientsList()
     {
         vector <clsBankClient> vClients = clsBankClient::GetClientsList();
         string Title = "\t Client List Screen";

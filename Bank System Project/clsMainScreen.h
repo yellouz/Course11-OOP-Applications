@@ -9,6 +9,7 @@
 #include "clsDeleteClientScreen.h"
 #include "clsUpdateClientScreen.h"
 #include "clsFindClientScreen.h"
+#include "clsTransactionsScreen.h"
 
 using namespace std;
 
@@ -41,25 +42,25 @@ class clsMainScreen:protected clsScreen
        static void _ShowAllClientsScreen()
        {
             //cout << "\nShow Clients Screen Will be here...\n";
-            clsClientListScreen::ShowClientsList();
+            clsClientListScreen::ShowAllClientsList();
        }
 
        static void _ShowAddNewClientsScreen()
        {
            //cout << "\nAdd New Client Screen Will be here...\n";
-            clsAddNewClientScreen::AddNewClientScreen();
+            clsAddNewClientScreen::ShowAddNewClientScreen();
        }
 
        static void _ShowDeleteClientScreen()
        {
            //cout << "\nDelete Client Screen Will be here...\n";
-            clsDeleteClientScreen::DeleteClientScreen();
+            clsDeleteClientScreen::ShowDeleteClientScreen();
        }
 
        static void _ShowUpdateClientScreen()
        {
            //cout << "\nUpdate Client Screen Will be here...\n";
-            clsUpdateClientScreen::UpdateClientScreen();
+            clsUpdateClientScreen::ShowUpdateClientScreen();
        }
 
        static void _ShowFindClientScreen()
@@ -70,8 +71,8 @@ class clsMainScreen:protected clsScreen
 
        static void _ShowTransactionsMenue()
        {
-           cout << "\nTransactions Menue Will be here...\n";
-
+           //cout << "\nTransactions Menue Will be here...\n";
+            clsTransactionsScreen::ShowTransactionsMenue();
        }
 
        static void _ShowManageUsersMenue()
@@ -124,11 +125,13 @@ class clsMainScreen:protected clsScreen
             case enMainMenueOptions::eShowTransactionsMenue:
                 system("cls");
                 _ShowTransactionsMenue();
+                _GoBackToMainMenue();
                 break;
 
             case enMainMenueOptions::eManageUsers:
                 system("cls");
                 _ShowManageUsersMenue();
+                _GoBackToMainMenue();
                 break;
 
             case enMainMenueOptions::eExit:

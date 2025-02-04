@@ -27,7 +27,7 @@ private:
     }
     
 public:
-    static void DeleteClientScreen()
+    static void ShowDeleteClientScreen()
     {
         _DrawScreenHeader("\t  Delete Client Screen");
 
