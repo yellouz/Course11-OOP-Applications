@@ -29,6 +29,11 @@ private:
 public:
     static void FindClientScreen()
     {
+        if (!CheckAccessRights(clsUser::enPermissions::pFindClient))
+        {
+            return;// this will exit the function and it will not continue
+        }
+
         _DrawScreenHeader("\t Find Client Screen");
 
         string AccountNumber;
