@@ -4,7 +4,7 @@
 #pragma once
 #include <iostream>
 #include <string>
-//#include "clsDate.h"
+#include "clsDate.h"
 
 using namespace std;
 
@@ -178,13 +178,13 @@ public:
         B = Temp;
     }
 
-    /*
+    
     static  void Swap(clsDate& A, clsDate& B)
     {
         clsDate::SwapDates(A, B);
 
     }
-    */
+    
     static  void ShuffleArray(int arr[100], int arrLength)
     {
 

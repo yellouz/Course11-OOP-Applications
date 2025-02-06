@@ -6,14 +6,14 @@
 #include <string>
 #include <limits>
 #include "clsString.h"
-//#include "clsDate.h"
+#include "clsDate.h"
 
 class clsInputValidate
 {
 
 public:
 
-	/*
+	
 	static bool IsNumberBetween(short Number, short From, short To)
 	{
 		if (Number >= From && Number <= To)
@@ -21,7 +21,7 @@ public:
 		else
 			return false;
 	}
-	*/
+	
 	static bool IsNumberBetween(int Number , int From, int To)
 	{
 		if (Number >= From && Number <= To)
@@ -47,7 +47,7 @@ public:
 			return false;
 	}
 
-	/*
+	
 	static bool IsDateBetween(clsDate Date, clsDate From, clsDate To)
 	{
 		//Date>=From && Date<=To
@@ -70,7 +70,7 @@ public:
 
 		return false;
 	}
-	*/
+	
 
 	static int ReadIntNumber(string ErrorMessage="Invalid Number, Enter again\n")
 	{
