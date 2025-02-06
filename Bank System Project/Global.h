@@ -1,7 +1,9 @@
 #pragma once
 #include <iostream>
 #include "clsUser.h"
-clsUser CurrentUser=clsUser::Find("","");
+
+//static?
+clsUser CurrentUser = clsUser::Find("", "");
 
 
 

@@ -13,7 +13,7 @@ class clsInputValidate
 
 public:
 
-	
+	/*
 	static bool IsNumberBetween(short Number, short From, short To)
 	{
 		if (Number >= From && Number <= To)
@@ -21,7 +21,8 @@ public:
 		else
 			return false;
 	}
-	
+	*/
+
 	static bool IsNumberBetween(int Number , int From, int To)
 	{
 		if (Number >= From && Number <= To)
@@ -117,12 +118,11 @@ public:
 		return Number;
 	}
 
-	/*
 	static bool IsValideDate(clsDate Date)
 	{
 		return	clsDate::IsValidDate(Date);
 	}
-	*/
+
 	static string ReadString()
 	{
 		string  S1="";

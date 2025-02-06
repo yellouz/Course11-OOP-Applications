@@ -9,14 +9,6 @@
 
 using namespace std;
 
-/*
--- check functions commented in clsUtil
-after fixing clsdate problems
-srand function and swap dates function
-
--- also check functions in clsinputvalidate
-*/
-
 class clsDate
 {
 
