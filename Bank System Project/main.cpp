@@ -1,6 +1,9 @@
-#include <iostream>
-#include "clsLoginScreen.h"
-using namespace std;
+
+// #include <iostream>
+// #include "clsLoginScreen.h"
+// using namespace std;
+
+#include "HeaderFiles/Global.h"
 
 int main()
 {
