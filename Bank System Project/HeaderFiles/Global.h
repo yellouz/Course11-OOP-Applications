@@ -37,9 +37,16 @@ clsUser CurrentUser = clsUser::Find("", "");
 
 #include "Screens/User/clsManageUsersScreen.h"
 #include "Screens/Transactions/clsTransactionsScreen.h"
+
+#include "Core/clsCurrency.h"
+#include "Screens/Currencies/clsListCurreciesScreen.h"
+#include "Screens/Currencies/clsFindCurrencyScreen.h"
+#include "Screens/Currencies/clsUpdateCurrencyRateScreen.h"
+#include "Screens/Currencies/clsCurrencyCalculatorScreen.h"
+#include "Screens/Currencies/clsCurrencyMainScreen.h"
+
 #include "Screens/clsMainScreen.h"
 #include "Screens/clsLoginScreen.h"
-
 
 using namespace std;
 
